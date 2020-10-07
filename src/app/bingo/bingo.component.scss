@@ -1,0 +1,27 @@
+.bingo-container {
+  width: 1000px;
+}
+.bingo-header {
+  height: 200px;
+  background-size: cover;
+  background-image: url(../../../pikefight2020.jpg);
+  background-color: #cccccc;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat( 5, minmax(100px, 1fr) );
+  //grid-template-columns: repeat( 5, minmax(100px, 1fr) 100px );
+  background-color: #2e3439;
+  padding: 4px;
+  grid-row-gap: 4px;
+  grid-column-gap: 4px;
+}
+.grid-item {
+  //width: 100px;
+  //height: 100px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 16px;
+  text-align: center;
+}
