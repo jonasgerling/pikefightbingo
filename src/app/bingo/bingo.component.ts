@@ -11,25 +11,34 @@ export class BingoComponent implements OnInit {
 
     constructor() {
     }
-  ngOnInit(): void {
-    this.bingoEntries = getBingoEntries(bingoMock);
+    ngOnInit(): void {
+      this.bingoEntries = this.getBingoEntries(bingoMock);
+    }
+
+    public windowPrint(): void {
+      window.print();
+    }
+    public generate(): void {
+      this.bingoEntries = this.getBingoEntries(bingoMock);
+    }
+    private getBingoEntries(array): string[] {
+      let currentIndex = array.length;
+      let temporaryValue;
+      let randomIndex;
+
+      while (0 !== currentIndex) {
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
+      }
+
+      return array.slice(0, 25);
     }
 }
 
-function getBingoEntries(array): string[] {
-  let currentIndex = array.length;
-  let temporaryValue;
-  let randomIndex;
 
-  while (0 !== currentIndex) {
 
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-
-  return array.slice(0, 25);
-}
