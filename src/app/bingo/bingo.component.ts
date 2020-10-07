@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {bingoMock} from './bingo.mock';
+import {bingoMock, Entry} from './bingo.mock';
 
 @Component({
   selector: 'app-bingo',
@@ -7,7 +7,7 @@ import {bingoMock} from './bingo.mock';
   styleUrls: ['./bingo.component.scss']
 })
 export class BingoComponent implements OnInit {
-  bingoEntries: string[];
+  bingoEntries: any[];
 
     constructor() {
     }
@@ -21,6 +21,11 @@ export class BingoComponent implements OnInit {
     public generate(): void {
       this.bingoEntries = this.getBingoEntries(bingoMock);
     }
+    public setActive(entry: Entry): void {
+      entry.clicked = !entry.clicked;
+      console.log(entry.clicked);
+    }
+
     private getBingoEntries(array): string[] {
       let currentIndex = array.length;
       let temporaryValue;
@@ -38,6 +43,7 @@ export class BingoComponent implements OnInit {
 
       return array.slice(0, 25);
     }
+
 }
 
 
