@@ -7,26 +7,28 @@ import {bingoMock, Entry} from './bingo.mock';
   styleUrls: ['./bingo.component.scss']
 })
 export class BingoComponent implements OnInit {
-  bingoEntries: any[];
+  bingoEntries: Entry[] = bingoMock;
 
     constructor() {
     }
     ngOnInit(): void {
-      this.bingoEntries = this.getBingoEntries(bingoMock);
+      this.bingoEntries = this.getBingoEntries(this.bingoEntries);
     }
 
     public windowPrint(): void {
       window.print();
     }
     public generate(): void {
-      this.bingoEntries = this.getBingoEntries(bingoMock);
+      this.bingoEntries.forEach(entry => {
+        entry.clicked = false;
+      });
+      this.bingoEntries = this.getBingoEntries(this.bingoEntries);
     }
     public setActive(entry: Entry): void {
       entry.clicked = !entry.clicked;
-      console.log(entry.clicked);
     }
 
-    private getBingoEntries(array): string[] {
+    private getBingoEntries(array: Entry[]): Entry[] {
       let currentIndex = array.length;
       let temporaryValue;
       let randomIndex;

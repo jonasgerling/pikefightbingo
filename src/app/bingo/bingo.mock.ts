@@ -5,7 +5,7 @@ export interface Entry {
 
 export const bingoMock: Entry[] = [
   {
-    info: '"vilket jävla hugg alltså!"',
+    info: '"Vilket jävla hugg alltså!"',
     clicked: false
   },
   {
@@ -122,6 +122,10 @@ export const bingoMock: Entry[] = [
   },
   {
     info: 'Henke får påminna Nicklas om att inte svära',
+    clicked: false
+  },
+  {
+    info: 'VILKEN JÄVLA GRIS!!”',
     clicked: false
   },
 
