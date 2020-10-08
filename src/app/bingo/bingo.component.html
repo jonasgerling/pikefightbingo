@@ -4,10 +4,11 @@
      </div>
     <div class="grid-container">
       <div (click)="setActive(entry)" class="grid-item" *ngFor="let entry of bingoEntries">
-        <div style="position: relative; width: 100%; height:100%">
-          <div>{{ entry.info }}</div>
-          <div class="bingo-check"*ngIf="entry.clicked"></div>
+        <div class="grid-item-inner" >
+          {{ entry.info }}
         </div>
+
+        <div class="bingo-check"*ngIf="entry.clicked"></div>
       </div>
     </div>
      <button (click)="windowPrint()">Print</button>
