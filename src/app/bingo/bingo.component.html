@@ -1,16 +1,19 @@
-   <div class="bingo-container">
-     <div class="bingo-header">
+ <div id="print-section" class="bingo-container">
+   <div class="bingo-header">
 
-     </div>
-    <div class="grid-container">
-      <div (click)="setActive(entry)" class="grid-item" *ngFor="let entry of bingoEntries">
-        <div class="grid-item-inner" >
-          {{ entry.info }}
-        </div>
-
-        <div class="bingo-check"*ngIf="entry.clicked"></div>
-      </div>
-    </div>
-     <button (click)="windowPrint()">Print</button>
-     <button (click)="generate()">Generate</button>
    </div>
+  <div class="grid-container">
+    <div (click)="setActive(entry)" class="grid-item" *ngFor="let entry of bingoEntries">
+      <div class="grid-item-inner" >
+        {{ entry.info }}
+      </div>
+
+      <div class="bingo-check"*ngIf="entry.clicked"></div>
+    </div>
+  </div>
+   <div class="button-div">
+     <button class="button-style" (click)="windowPrint()">Print</button>
+     <button class="button-style" (click)="generate()">Generate</button>
+   </div>
+ </div>
+

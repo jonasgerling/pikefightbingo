@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {bingoMock, Entry} from './bingo.mock';
 
 @Component({
@@ -7,6 +7,7 @@ import {bingoMock, Entry} from './bingo.mock';
   styleUrls: ['./bingo.component.scss']
 })
 export class BingoComponent implements OnInit {
+  @ViewChild('print') printContent: ElementRef;
   bingoEntries: Entry[] = bingoMock;
 
     constructor() {
