@@ -253,10 +253,10 @@
 }
 @include keyframes('slamDown') {
   0% {
-      @include transform(translate(-30%,-70%) scale(1.4));
+    @include transform(translate(20px, -20px) scale(1.4));
   }
 
   100% {
-      @include transform(translate(-50%,-50%) scale(1.0));
+    @include transform(translate(0, 0) scale(1.0));
   }
 }
