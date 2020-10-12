@@ -17,10 +17,6 @@ export const bingoMock: Entry[] = [
     clicked: false
   },
   {
-    info:  'Trumman går på grund',
-    clicked: false
-  },
-  {
     info:  'Henke fiskar spinnerbait',
     clicked: false
   },
@@ -53,10 +49,6 @@ export const bingoMock: Entry[] = [
     clicked: false
   },
   {
-    info:  '"Gäddor har inga händer"',
-    clicked: false
-  },
-  {
     info:  '"Kolla virveln"',
     clicked: false
   },
@@ -73,7 +65,7 @@ export const bingoMock: Entry[] = [
     clicked: false
   },
   {
-    info:  'Fränstam föreläser för Evelina',
+    info:  'Fränstam föreläser',
     clicked: false
   },
   {
@@ -109,10 +101,6 @@ export const bingoMock: Entry[] = [
     clicked: false
   },
   {
-    info: 'Fränstam badar',
-    clicked: false
-  },
-  {
     info: 'Nicklas Jonsson har "Knäckt koden"',
     clicked: false
   },
@@ -128,5 +116,15 @@ export const bingoMock: Entry[] = [
     info: 'VILKEN JÄVLA GRIS!!”',
     clicked: false
   },
+  {
+    info: 'Fångad meterfisk',
+    clicked: false
+  },
+];
 
+const unlikely: string[] = [
+  'Truman går på grund',
+  'Gäddor har inga händer',
+  'Fränstam badar',
+  'Fränstam föreläser för Evelina'
 ];
