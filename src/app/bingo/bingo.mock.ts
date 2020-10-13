@@ -120,6 +120,18 @@ export const bingoMock: Entry[] = [
     info: 'Fångad meterfisk',
     clicked: false
   },
+  {
+    info: 'Dubbelhugg',
+    clicked: false
+  },
+  {
+    info: '"Den får gå tillbaka"',
+    clicked: false
+  },
+  {
+    info: 'Trumman gör tummen upp',
+    clicked: false
+  },
 ];
 
 const unlikely: string[] = [
